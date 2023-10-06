@@ -1,3 +1,4 @@
+using System.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RazorPagesMovie.Data;
@@ -8,9 +9,21 @@ builder.Services.AddRazorPages();
 
 if (builder.Environment.IsDevelopment())
 {
-    builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
-
+    var conStrBuilder = new SqlConnectionStringBuilder(
+            builder.Configuration.GetConnectionString("RazorPagesMovieContext"));
+    if (conStrBuilder != null)
+    {
+        conStrBuilder.Password = builder.Configuration["DbPassword"];
+        var connectionString = conStrBuilder.ConnectionString;
+        builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+            options.UseSqlServer(connectionString));
+    }
+    else
+    {
+        throw new InvalidOperationException("Connection string 'ProductionMovieContext' not found.");
+    }
+    // builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+    //     options.UseSqlServer(connectionString));
 }
 else
 {
