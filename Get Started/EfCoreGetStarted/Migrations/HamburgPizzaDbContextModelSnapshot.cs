@@ -4,19 +4,16 @@ using EfCoreGetStarted.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace EfCoreGetStarted.Migrations
 {
-    [DbContext(typeof(HamburgPizzaContext))]
-    [Migration("20231006175636_AddMail")]
-    partial class AddMail
+    [DbContext(typeof(HamburgPizzaDbContext))]
+    partial class HamburgPizzaDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,7 +71,7 @@ namespace EfCoreGetStarted.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex(new[] { "CustomerId" }, "IX_Orders_CustomerId");
 
                     b.ToTable("Orders");
                 });
@@ -98,9 +95,9 @@ namespace EfCoreGetStarted.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
+                    b.HasIndex(new[] { "OrderId" }, "IX_OrderDetails_OrderId");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex(new[] { "ProductId" }, "IX_OrderDetails_ProductId");
 
                     b.ToTable("OrderDetails");
                 });
@@ -118,7 +115,7 @@ namespace EfCoreGetStarted.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(6,2)");
+                        .HasColumnType("decimal(6, 2)");
 
                     b.HasKey("Id");
 
@@ -145,7 +142,7 @@ namespace EfCoreGetStarted.Migrations
                         .IsRequired();
 
                     b.HasOne("EfCoreGetStarted.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("OrderDetails")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -161,6 +158,11 @@ namespace EfCoreGetStarted.Migrations
                 });
 
             modelBuilder.Entity("EfCoreGetStarted.Models.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("EfCoreGetStarted.Models.Product", b =>
                 {
                     b.Navigation("OrderDetails");
                 });

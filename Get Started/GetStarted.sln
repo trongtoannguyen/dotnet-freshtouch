@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIClient", "WebAPIClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{A5FB1483-EF02-4CA6-9619-36BE40BEB426}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreGetStarted", "EfCoreGetStarted\EfCoreGetStarted.csproj", "{D0A480C5-A504-4504-BF84-25A8906AD514}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A5FB1483-EF02-4CA6-9619-36BE40BEB426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5FB1483-EF02-4CA6-9619-36BE40BEB426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5FB1483-EF02-4CA6-9619-36BE40BEB426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A480C5-A504-4504-BF84-25A8906AD514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A480C5-A504-4504-BF84-25A8906AD514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A480C5-A504-4504-BF84-25A8906AD514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A480C5-A504-4504-BF84-25A8906AD514}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

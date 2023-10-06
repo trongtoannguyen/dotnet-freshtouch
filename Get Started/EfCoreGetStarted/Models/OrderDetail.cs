@@ -1,11 +1,19 @@
-﻿namespace EfCoreGetStarted.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class OrderDetail
+namespace EfCoreGetStarted.Models;
+
+public partial class OrderDetail
 {
     public int Id { get; set; }
+
     public int Quantity { get; set; }
+
     public int ProductId { get; set; }
+
     public int OrderId { get; set; }
-    public Order Order { get; set; } = null!;
-    public Product Product { get; set; } = null!;
+
+    public virtual Order Order { get; set; } = null!;
+
+    public virtual Product Product { get; set; } = null!;
 }
