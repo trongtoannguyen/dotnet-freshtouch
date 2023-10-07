@@ -1,17 +1,31 @@
-﻿using EfCoreGetStarted.Models;
-using EfCoreGetStarted.Data;
+﻿using EfCoreGetStarted.Data;
+using EfCoreGetStarted.Models;
 
-using HamburgPizzaContext context = new();
-
-var products = context.Products
-    .Where(p => p.Price > 5)
-    .OrderBy(p => p.Name)
-    .ToList();
-
-foreach (var product in products)
+using HamburgPizzaDbContext context = new();
+/* 
+Customer customer1 = new()
 {
-    Console.WriteLine($"Id: {product.Id}");
-    Console.WriteLine($"Name: {product.Name}");
-    Console.WriteLine($"Price: {product.Price}");
-    Console.WriteLine(new string('-', 20));
+    FirstName = "John",
+    LastName = "Doe",
+    Address = "123 Main St",
+    Phone = "555-555-5555",
+    Email = "JohnDoe@gmail.com"
+};
+Customer customer2 = new()
+{
+    FirstName = "Jane",
+    LastName = "Doe",
+    Address = "123 Main St",
+    Phone = "555-555-5555",
+    Email = "Jane@microsoft.com"
+};
+
+context.Customers.AddRange(customer1, customer2);
+context.SaveChanges(); */
+
+foreach (Customer customer in context.Customers)
+{
+    Console.WriteLine($"Name: {customer.FirstLast}");
+    Console.WriteLine($"Address: {customer.Address}");
+    Console.WriteLine($"eMail: {customer.Email}");
 }
