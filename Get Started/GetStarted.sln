@@ -11,10 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFcore", "EfCoreGetStarted\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{EC44665D-235F-4E65-86CE-9230C3F99CC2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureStorage", "AzureStorage", "{F982B4CA-80B8-4D30-B2DD-A4E87905999D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "Azure\WebApplication1\WebApplication1.csproj", "{5F6D9715-162B-4E0F-81E0-C3FFA5ADAD6D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,15 +33,8 @@ Global
 		{EC44665D-235F-4E65-86CE-9230C3F99CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC44665D-235F-4E65-86CE-9230C3F99CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC44665D-235F-4E65-86CE-9230C3F99CC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F6D9715-162B-4E0F-81E0-C3FFA5ADAD6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F6D9715-162B-4E0F-81E0-C3FFA5ADAD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F6D9715-162B-4E0F-81E0-C3FFA5ADAD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F6D9715-162B-4E0F-81E0-C3FFA5ADAD6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{5F6D9715-162B-4E0F-81E0-C3FFA5ADAD6D} = {F982B4CA-80B8-4D30-B2DD-A4E87905999D}
 	EndGlobalSection
 EndGlobal
