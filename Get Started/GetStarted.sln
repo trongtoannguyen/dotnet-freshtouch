@@ -13,7 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCore2", "EfCore2\EfCore2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFcore1", "EfCoreGetStarted\EFcore1.csproj", "{9AEDE258-780C-41CC-903A-5229904397CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{CEC4C175-BC01-4704-9913-938CD7AC5834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "API\TodoApi\TodoApi.csproj", "{B193BE6E-005C-4ABE-8C15-1C92D0BCA866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoPizza", "API\ContosoPizza\ContosoPizza.csproj", "{C889569A-3378-4AFC-8FB5-BCA4B21EEEF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +45,20 @@ Global
 		{9AEDE258-780C-41CC-903A-5229904397CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AEDE258-780C-41CC-903A-5229904397CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AEDE258-780C-41CC-903A-5229904397CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B193BE6E-005C-4ABE-8C15-1C92D0BCA866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B193BE6E-005C-4ABE-8C15-1C92D0BCA866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B193BE6E-005C-4ABE-8C15-1C92D0BCA866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B193BE6E-005C-4ABE-8C15-1C92D0BCA866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C889569A-3378-4AFC-8FB5-BCA4B21EEEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C889569A-3378-4AFC-8FB5-BCA4B21EEEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C889569A-3378-4AFC-8FB5-BCA4B21EEEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C889569A-3378-4AFC-8FB5-BCA4B21EEEF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B193BE6E-005C-4ABE-8C15-1C92D0BCA866} = {CEC4C175-BC01-4704-9913-938CD7AC5834}
+		{C889569A-3378-4AFC-8FB5-BCA4B21EEEF3} = {CEC4C175-BC01-4704-9913-938CD7AC5834}
 	EndGlobalSection
 EndGlobal
