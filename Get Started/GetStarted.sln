@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCore2", "EfCore2\EfCore2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFcore1", "EfCoreGetStarted\EFcore1.csproj", "{9AEDE258-780C-41CC-903A-5229904397CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9AEDE258-780C-41CC-903A-5229904397CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AEDE258-780C-41CC-903A-5229904397CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AEDE258-780C-41CC-903A-5229904397CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1D30F9-0CD0-4A44-8D66-5B31D2828CED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
