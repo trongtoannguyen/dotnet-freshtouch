@@ -30,6 +30,16 @@
                         </li>
                     </ul>
                     <div class="navbar-nav">
+                        @* search for movies *@
+                        <form class="form-inline" asp-controller="Movies" asp-action="Index" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="searchString" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Go!</button>
+                                </span>
+                            </div>
+                        </form>
+                        
                         <div class="align-items-right">
                             <a class="btn btn-primary mb-2" asp-controller="Account" asp-action="AccountLogin">Login</a>
                         </div>
