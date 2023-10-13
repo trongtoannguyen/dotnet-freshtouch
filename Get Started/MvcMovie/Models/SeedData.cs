@@ -26,6 +26,7 @@ public static class SeedData
                 Genre = "Romantic Comedy",
                 Rating = "R",
                 Price = 7.99M,
+                // Image = "https://upload.wikimedia.org/wikipedia/en/1/1c/WhenHarryMetSallyPoster.jpg"
             },
             new Movie
             {
@@ -34,6 +35,7 @@ public static class SeedData
                 Genre = "Comedy",
                 Rating = "R",
                 Price = 8.99M,
+                // Image = "https://upload.wikimedia.org/wikipedia/en/3/32/Ghostbusters_2016_film_poster.png"
             },
             new Movie
             {
@@ -42,6 +44,7 @@ public static class SeedData
                 Genre = "Comedy",
                 Rating = "R",
                 Price = 9.99M,
+                // Image = "https://upload.wikimedia.org/wikipedia/en/0/01/Ghostbusters_ii_poster.jpg"
             },
             new Movie
             {
@@ -50,6 +53,7 @@ public static class SeedData
                 Genre = "Western",
                 Rating = "R",
                 Price = 3.99M,
+                // Image = "https://upload.wikimedia.org/wikipedia/commons/5/55/Rio_Bravo_%281959_poster%29.jpg"
             }
         );
         context.SaveChanges();

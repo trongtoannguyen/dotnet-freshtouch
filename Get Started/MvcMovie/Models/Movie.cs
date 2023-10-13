@@ -11,7 +11,9 @@ public class Movie
     [DataType(DataType.Date)]
     public DateTime ReleaseDate { get; set; }
     public string? Genre { get; set; }
+    [Range(1, 100), DataType(DataType.Currency)]
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Price { get; set; }
+    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), Required, StringLength(5)]
     public string? Rating { get; set; }
 }
